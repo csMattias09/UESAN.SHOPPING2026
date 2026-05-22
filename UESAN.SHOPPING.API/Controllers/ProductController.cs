@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using UESAN.SHOPPING.CORE.Core.DTOs;
 using UESAN.SHOPPING.CORE.Core.Interfaces;
@@ -6,6 +7,7 @@ namespace UESAN.SHOPPING.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductController : ControllerBase
     {
         private readonly IProductServices _productServices;
